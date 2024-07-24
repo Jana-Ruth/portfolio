@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     color: whitesmoke;
     background-color: rgb(29, 29, 29);
     font-family: Arial, Helvetica, sans-serif;
+    
     
 }
 
@@ -30,6 +35,7 @@ padding-top: 2rem;
 padding-right: 4rem;
 width: 25%;
 position: fixed;
+z-index: 60;
 }
 
 
@@ -44,8 +50,8 @@ position: fixed;
 .empty{
     width: 1.5rem;
     height: 1.5rem;
-    border-top: 3px orangered solid;
-     border-right: 3px orangered solid;
+    border-top: 3px red solid;
+     border-right: 3px red solid;
      position: absolute;
      left: 83%;
      top: 2%;
@@ -54,8 +60,8 @@ position: fixed;
 .emptytoo{
     width: 1.5rem;
     height: 1.5rem;
-    border-bottom: 3px orangered solid;
-     border-left: 3px orangered solid;
+    border-bottom: 3px red solid;
+     border-left: 3px red solid;
      position: absolute;
      left: 0.6%;
      top: 60%;
@@ -88,8 +94,13 @@ nav a{
     
 }
 
+nav a:hover{
+    color: red;
+    transition: 1s;
+}
+
 .active{
-    color: orangered;
+    color: red;
 }
 
 .icons{
@@ -112,14 +123,14 @@ nav a{
     align-items: center;
     padding-left: 25rem;
      padding-top: 6rem;
-      display: none; 
+      /* display: none;  */
 }
 
 .name{
     font-family: "Sacramento", cursive;
     font-weight: 600;
     font-style: normal;
-    color: orangered;
+    color: red;
 }
 
 .hero-sub h2{
@@ -142,7 +153,7 @@ nav a{
 }
 
  button{
-    background-color: orangered;
+    background-color: red;
     padding: 1rem 2rem;
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
@@ -151,6 +162,7 @@ nav a{
     border: none;
     border-radius: 2rem;
 }
+
 #my-image {
     background-color: black;
     padding: 0rem 0rem;
@@ -159,7 +171,7 @@ nav a{
 
 .changecontent{
     /* content: ''; */
-    color: orangered;
+    color: red;
     /* animation: changetext 10s infinite linear; */
 }
 
@@ -178,8 +190,8 @@ nav a{
     width: 4rem;
     height: 4rem;
     position: absolute;
-    border-left: 5px solid orangered;
-    border-top: 5px solid orangered;
+    border-left: 5px solid red;
+    border-top: 5px solid red;
     bottom: 86%;
     left: 1%;
 }
@@ -189,8 +201,8 @@ nav a{
     width: 4rem;
     height: 4rem;
     position: absolute;
-    border-right: 5px solid orangered;
-    border-bottom: 5px solid orangered;
+    border-right: 5px solid red;
+    border-bottom: 5px solid red;
     left: 73%;
     bottom: 4.5%;
 
@@ -223,11 +235,14 @@ nav a{
 
 .settingcolor{
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
     position: fixed;
     align-items: center;
-    top: 8%;
-    right: 4%;
+    top: 3%;
+    right: 2%;
+    z-index: 80;
+    transform: translateX(80%)
+
 }
 
 .settingmode{
@@ -242,43 +257,61 @@ nav a{
     background-color: rgb(33, 33, 33);
     padding: 0.6rem;
     border-radius: 100%;
-
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
 }
 
-.moon{
+.rotate{
+    
+    animation: ruth 8s backwards linear infinite;
+}
+
+@keyframes ruth{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+#moon{
     color: whitesmoke;
     font-size: 1.2rem;
     background-color: rgb(33, 33, 33);
     padding: 0.6rem;
     border-radius: 100%;
-}
-
-.sunny{
-    color: whitesmoke;
-    font-size: 1.2rem;
     display: none;
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+}
+
+
+#sunny{
+    color: whitesmoke;
+    font-size: 1.2rem;
     background-color: rgb(33, 33, 33);
     padding: 0.6rem;
     border-radius: 100%;
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+    
 }
 
+ 
 .colortext{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 19px;
-    background-color: rgb(33, 33, 33);
-    padding: 0.5rem;
-    border: rgb(94, 93, 93) 1px solid;
-    border-radius: 3px;
-    display: none;
-}
-
-.show{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
      gap: 16px;
+    background-color: rgb(33, 33, 33);
+    padding: 0.5rem;
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+    border-radius: 3px;
+    ;
+
+    
+}
+
+.show{
+  
+     transform: translateX(0%);
+     transition: 1s ease-in;
     
 }
 
@@ -291,14 +324,14 @@ nav a{
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
-    background-color: orangered;
+    background-color: red;
 }
 
 #orange{
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
-    background-color: rgb(249, 146, 3);
+    background-color: orange;
 }
 
 #green{
@@ -312,7 +345,7 @@ nav a{
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
-    background-color: blue;
+    background-color: rgb(182, 132, 6);
 }
 
 #pink{
@@ -331,6 +364,7 @@ nav a{
     flex-direction: column;
     gap: 2.5rem;
     padding-right: 1rem;
+    /* display: none;  */
 }
 
 .aboutme{
@@ -341,21 +375,21 @@ nav a{
 
 
 .long{
-    background-color: orangered;
+    background-color: red;
     width: 4rem;
     height: 0.3rem;
     border-radius: 1rem;
 }
 
 .short{
-    background-color: orangered;
+    background-color: red;
     width: 2rem;
     height: 0.3rem;
     border-radius: 1rem;
 }
 
 .odd{
-    color: orangered;
+    color: red;
 }
 
 .aboutme h2{
@@ -371,9 +405,16 @@ nav a{
     gap: 3rem;
 }
 
-.personal a{
-    text-decoration: none;
-    color: whitesmoke;
+.colortext{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+     gap: 16px;
+     background-color: rgb(30, 29, 29);
+     border: 0.2px solid rgb(50, 50, 50);
+    padding: 0.5rem;
+    border-radius: 3px;
+    
 }
 
 .personal{
@@ -384,6 +425,11 @@ nav a{
 
 .personal span{
     font-weight: 700;
+}
+
+.personal a{
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 
@@ -414,6 +460,7 @@ gap: 1rem;
     display: flex;
     justify-content: space-between;
     
+    
 }
 
 .levelbars{
@@ -437,7 +484,7 @@ gap: 1rem;
 .bar1{
     width: 75%;
     height: 5px;
-background-color: orangered;
+background-color: red;
 border-radius: 1rem;
 z-index: 30;
 }
@@ -445,7 +492,7 @@ z-index: 30;
 .bar2{
     width: 90%;
     height: 5px;
-background-color: orangered;
+background-color: red;
 border-radius: 1rem;
 z-index: 30;
 }
@@ -453,7 +500,7 @@ z-index: 30;
 .bar3{
     width: 40%;
     height: 5px;
-background-color: orangered;
+background-color: red;
 border-radius: 1rem;
 z-index: 30;
 }
@@ -461,7 +508,7 @@ z-index: 30;
 .bar4{
     width: 10%;
     height: 5px;
-background-color: orangered;
+background-color: red;
 border-radius: 1rem;
 z-index: 30;
 }
@@ -483,28 +530,683 @@ z-index: 30;
     
 }
 
+.exedu{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.edu{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 45%;
+
+}
+
+.inneredu{
+    display: flex;
+    gap: 2rem;
+    background-color: rgb(33, 33, 33);
+    
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+}
+
+.inneredu p{
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+
+.linecircle{
+    position: relative;
+}
+
+.line{
+    height: 100%;
+    width: 2px;
+    background-color: red;
+}
+
+.circles{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    gap: 11rem;
+    top: 0%;
+    left: -0.4rem;
+}
+
+.circle{
+width: 1rem;
+height: 1rem;
+background-color: red;
+border-radius: 100%;
+}
+
+.leveledu{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.leveledus{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.date{
+    display: flex;
+ gap: 0.5rem;
+ align-items: center;
+}
+
+.calendar{
+    font-size: 1rem;
+}
+
+
+.services{
+    padding-left: 26rem;
+    padding-top: 2rem;
+    display: flex;
+    
+    flex-direction: column;
+    gap: 3rem;
+    padding-right: 1rem;
+margin-bottom: 2rem;
+/* display: none; */
+}
+
+.services h2{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.eachservice{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(33, 33, 33);
+    border-radius: 10px;
+    padding: 1rem;
+align-items: center;
+width: 40%;
+box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+}
+
+.eachservice:hover .laptop{
+    padding: 1rem;
+    border-radius: 100%;
+    background-color: red; 
+    color: whitesmoke;
+    transition: 1s;
+}
+
+.eachservice img{
+    width: 5rem;
+}
+
+.serviceoffer{
+    display: flex;
+    gap: 1rem;
+}
+
+.serviceoffer p{
+    line-height: 1.5rem;
+    
+    text-align:center;
+}
+
+.laptop{
+    font-size: 2rem;
+    color: red;
+     padding: 1rem;
+    border-radius: 100%;
+    
+}
+
+.portfolio{
+    padding-left: 26rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.projects img {
+    width: 30%;
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+}
+
+.projects img:hover{
+    scale: 1.1;
+    transition: 1s;
+}
+
+.projects{
+    display: flex;
+    gap: 2rem;
+}
+
+.absolute{
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+
+.absolute img{
+    width: 100%;
+
+}
+
+
+
+.absolute a{
+    position: absolute;
+    right: 0%;
+bottom: 3rem;
+   
+    transform: translateX(101%);
+}
+
+.absolute button{
+    background-color: red;
+    color: whitesmoke;
+    padding: 1rem 2rem;
+    border: none;
+}
+
+.absolute:hover a{
+    transform: translate(0%);
+    transition: 1s;
+}
+
+.absolute :hover{
+    opacity: 0.6;
+    transition: 1s;
+}
+
+button:hover{
+    opacity: 0.6;
+    transition: 1s;
+}
+
+
+
+.project{
+    display: flex;
+    gap: 11rem;
+}
+
+/* .project img{
+    width: 20%;
+} */
+
+.project .absolute{
+    position: relative;
+    width: 20%;
+    overflow: hidden;
+}
+
+.project .absolute img{
+    width: 100%;
+}
+
+
+.project img:hover{
+    scale: 1.1;
+}
+
+.curve img{
+    border-radius: 4px;
+}
+
+.contact{
+    padding-left: 26rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contactcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contactcontent h3{
+    color: red;
+    font-size: 2rem;
+}
+
+.contactcontent h4{
+    font-size: 1rem;
+}
+
+.groupcontacts{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 8rem;
+}
+
+.eachcontact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    
+}
+
+.contacticon{
+    font-size: 2rem;
+    color: red;
+}
+
+.copyright {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.8;
+   
+    /* padding-block: 20px; */
+  }
+
+  .safe-footer:hover{
+    color: red;
+  
+  }
+
+  footer{
+    display: flex;
+    background-color: rgb(42, 41, 41);
+    position: fixed;
+    bottom: -1%;
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+    width: 100%;
+   padding-top: 10px;
+   padding-bottom: 10px;
+    padding-left: 20rem;
+    align-items: center;
+justify-content: center;
+gap: 6rem;
+z-index: 50;
+  }
+
+  .social-list{
+    display: flex;
+    gap: 10px;
+
+  }
+
+  .social-link{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    
+    padding: 3px;
+    border-radius: 100%;
+  }
+
+  .social-list li{
+    list-style: none;
+  }
+
+  .social-link:hover{
+    color: red;
+    transition: 1s;
+  }
+  
 
 @media screen and (max-width : 768px){
     .sidehead{
-        display: none;
+        transform: translateX(-500%);
+        /* display: none; */
 
+    }
+
+    .sideheadcomein{
+        z-index: 40;
+        width: 60%;
+        opacity: 0.9;
+        transform: translate(0%);
+        transition: 1s;
     }
 
     #menue{
         display: block;
         color: whitesmoke;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        background-color: rgb(30, 29, 29);
+        border: 0.2px solid rgb(50, 50, 50);
+        border-radius: 3px;
+        padding: 0.2rem;
+        position: fixed;
+        z-index: 50;
     }
+
+
+    
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+       padding: 6rem 0rem 2rem 0rem;
+          /* display: none;  */
+    }
+    
+    .hero-sub {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    #my-image {
+        background-color: black;
+        padding: 0rem 0rem;
+        width: 90%;
+        margin-left: 1rem;
+    }
+
+    .herobanner{
+    
+        padding: 1rem;
+        position: relative;
+        
+        
+    }
+    
+    
+    .imageborder{
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        border-left: 5px solid red;
+        border-top: 5px solid red;
+        bottom: 86%;
+        left: 4%;
+    }
+    
+    
+    .secimageborder{
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        border-right: 5px solid red;
+        border-bottom: 5px solid red;
+        left: 78%;
+        bottom: 1%;
+    
+    }
+
+    .about{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        /* display: none; */
+    }
+    
+    .aboutme{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    
+    
+    .long{
+        background-color: red;
+        width: 4rem;
+        height: 0.3rem;
+        border-radius: 1rem;
+    }
+    
+    .short{
+        background-color: red;
+        width: 2rem;
+        height: 0.3rem;
+        border-radius: 1rem;
+    }
+    
+    .odd{
+        color: red;
+        
+    }
+    
+    .aboutme h2{
+        font-size: 2rem;
+    }
+    
+    .about h3{
+        font-size: 1.6rem;
+    }
+    
+    .both{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .qualifys{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+    
+    .levelbars{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .personal p{
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgb(61, 61, 61);
+        width: 100%;
+    }
+
+    .exedu{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .services{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+    margin-bottom: 2rem;
+    /* display: none; */
+    }
+
+    .services h2{
+        margin-top: 3rem;
+    }
+
+    .eachservice{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: rgb(33, 33, 33);
+        border-radius: 10px;
+        padding: 1rem;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 6px -2px rgba(48, 48, 48, 1);
+    }
+    
+    
+
+    .serviceoffer{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+
+    .portfolio{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        
+        gap: 3rem;
+    }
+
+    .project .absolute{
+        position: relative;
+        width: 95%;
+        overflow: hidden;
+    }
+    
+    
+    .absolute{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .projects img {
+        width: 100%;
+    }
+    
+    .projects img:hover{
+        scale: 1;
+    }
+    
+    .projects{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .project{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .project img{
+        width: 100%;
+    }
+
+    .project img:hover{
+        scale: 1;
+    }
+    
+    .contact{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    } 
+
+    .groupcontacts{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 7px 10px 7px;
+        gap: 10px;
+    }
+    
 }
 
+@media screen and (max-width : 460px) {
+    
+
+    
+    
+    .contactcontent h3{
+        color: red;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .contactcontent h4{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .btns{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 7px 10px 7px;
+        gap: 10px;
+    }
+
+
+
+    /* .btns a button{
+        font-size: 1.5rem;
+        padding: 1rem 3rem;
+    } 
+        
+    
+    
+    
+      button{
+            position: absolute;
+            right: 0%;
+        bottom: 3rem;
+            background-color: orange;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            transform: translateX(101%);
+        }
+
+        .absolute:hover button{
+            transform: translate(0%);
+            transition: 1s;
+        }
+
+        img:hover{
+            opacity: 0.6;
+            transition: 1s;
+        }*/
+
+
+}
+
+
 .toprightr{
-    border-top: 3px orangered solid;
-    border-right: 3px  orangered solid; 
+    border-top: 3px red solid;
+    border-right: 3px  red solid; 
 }
 
 .bottomleftr{
-    border-bottom:3px  orangered solid;
-    border-left:3px orangered solid; 
+    border-bottom:3px  red solid;
+    border-left:3px red solid; 
 
 }
 
@@ -532,15 +1234,14 @@ z-index: 30;
 
 }
 
-
 .toprightb{
-    border-top: 3px blue solid;
-    border-right: 3px  blue solid; 
+    border-top: 3px goldenrod solid;
+    border-right: 3px  goldenrod solid; 
 }
 
 .bottomleftb{
-    border-bottom:3px blue solid;
-    border-left:3px blue solid; 
+    border-bottom:3px goldenrod solid;
+    border-left:3px goldenrod solid; 
 
 }
 
@@ -557,11 +1258,102 @@ z-index: 30;
 
 
 
+.toprightrl{
+    border-top: 5px red solid;
+    border-right: 5px  red solid; 
+}
+
+.bottomleftrl{
+    border-bottom:5px  red solid;
+    border-left:5px red solid; 
+
+}
+
+
+
+.toprightol{
+    border-top: 5px orange solid;
+    border-right: 5px  orange solid; 
+}
+
+.bottomleftol{
+    border-bottom:5px orange solid;
+    border-left:5px orange solid; 
+
+}
+
+.toprightgl{
+    border-top: 5px green solid;
+    border-right: 5px  green solid; 
+}
+
+.bottomleftgl{
+    border-bottom:5px green solid;
+    border-left:5px green solid; 
+
+}
 
 
 
 
 
 
+
+
+.contact-form{
+    padding: 2rem 0;
+    border-top: 1px solid #c7c7c7;
+    width: 90%;
+
+}
+.contact-form form{
+    padding-bottom: 1rem;
+}
+.form-control{
+    width: 100%;
+    border: 1.5px solid #c7c7c7;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    outline: 0;
+    background-color: rgb(33, 33, 33);
+}
+.form-control:focus{
+    box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+}
+.contact-form form div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
+}
+#send-btn{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-bottom: 3rem;
+}
+#send-btn:hover{
+    opacity: 0.6;
+}
+.contact-form > div img{
+    width: 85%;
+}
+.contact-form > div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.active{
+    color: red;
+}
 
 

@@ -1,0 +1,224 @@
+nav a:hover{
+    color: orange;
+    transition: 1s;
+}
+
+
+.empty{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: 3px orange solid;
+     border-right: 3px orange solid;
+     position: absolute;
+     left: 83%;
+     top: 2%;
+}
+ 
+.emptytoo{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-bottom: 3px orange solid;
+     border-left: 3px orange solid;
+     position: absolute;
+     left: 0.6%;
+     top: 60%;
+}
+
+.name{
+    font-family: "Sacramento", cursive;
+    font-weight: 600;
+    font-style: normal;
+    color: orange;
+}
+
+button{
+    background-color: orange;
+    padding: 1rem 2rem;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+
+.changecontent{
+    /* content: ''; */
+    color: orange;
+    /* animation: changetext 10s infinite linear; */
+}
+
+.imageborder{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    border-left: 5px solid orange;
+    border-top: 5px solid orange;
+    bottom: 86%;
+    left: 1%;
+}
+
+
+.secimageborder{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    border-right: 5px solid orange;
+    border-bottom: 5px solid orange;
+    left: 73%;
+    bottom: 4.5%;
+
+}
+
+.long{
+    background-color: orange;
+    width: 4rem;
+    height: 0.3rem;
+    border-radius: 1rem;
+}
+
+.short{
+    background-color: orange;
+    width: 2rem;
+    height: 0.3rem;
+    border-radius: 1rem;
+}
+
+.odd{
+    color: orange;
+}
+
+.bar1{
+    width: 75%;
+    height: 5px;
+background-color: orange;
+border-radius: 1rem;
+z-index: 30;
+}
+
+.bar2{
+    width: 90%;
+    height: 5px;
+background-color: orange;
+border-radius: 1rem;
+z-index: 30;
+}
+
+.bar3{
+    width: 40%;
+    height: 5px;
+background-color: orange;
+border-radius: 1rem;
+z-index: 30;
+}
+
+.bar4{
+    width: 10%;
+    height: 5px;
+background-color: orange;
+border-radius: 1rem;
+z-index: 30;
+}
+
+.line{
+    height: 100%;
+    width: 2px;
+    background-color: orange;
+}
+
+
+.circle{
+    width: 1rem;
+    height: 1rem;
+    background-color: orange;
+    border-radius: 100%;
+    }
+
+    .eachservice:hover .laptop{
+        padding: 1rem;
+        border-radius: 100%;
+        background-color: orange; 
+        color: whitesmoke;
+        transition: 1s;
+    }
+
+    .laptop{
+        font-size: 2rem;
+        color: orange;
+         padding: 1rem;
+        border-radius: 100%;
+        
+    }
+
+    .absolute button{
+        background-color: orange;
+        color: whitesmoke;
+        padding: 1rem 2rem;
+        border: none;
+    }
+
+    .contactcontent h3{
+        color: orange;
+        font-size: 2rem;
+    }
+
+    .contacticon{
+        font-size: 2rem;
+        color: orange;
+    }
+   
+    #send-btn{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #fff;
+        background:orange;
+        border: none;
+        border-radius: 5px;
+        padding: 0.7rem 1.5rem;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    .safe-footer:hover{
+        color: orange;
+      
+      }
+      
+    
+      .social-link:hover{
+        color: orange;
+        transition: 1s;
+      }
+
+      .active{
+        color: orange;
+    }
+    
+    
+
+      @media  screen and (max-width : 768px) {
+        .imageborder{
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            border-left: 5px solid orange;
+            border-top: 5px solid orange;
+            bottom: 86%;
+            left: 4%;
+        }
+        
+        
+        .secimageborder{
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            border-right: 5px solid orange;
+            border-bottom: 5px solid orange;
+            left: 78%;
+            bottom: 1%;
+        
+        }
+      }
+    

@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="red.css" class="alternatestyles" title="red" disabled>
+    <link rel="stylesheet" href="orange.css" class="alternatestyles" title="orange" disabled>
+    <link rel="stylesheet" href="green.css" class="alternatestyles" title="green" disabled>
+    <link rel="stylesheet" href="blue.css" class="alternatestyles" title="blue" disabled >
+    <link rel="stylesheet" href="pink.css" class="alternatestyles" title="pink" disabled>
+    <link rel="stylesheet" href="night.css" class="alternatestyle" title="night" disabled>
+    <link rel="stylesheet" href="day.css" class="alternatestyle" title="day" disabled>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
@@ -18,17 +27,17 @@
     <div class="empty"></div> <div class="emptytoo"></div>
 </div>
     <nav>
-        <a href="" class="navlist active" ><span><ion-icon name="home" class="icons"></ion-icon></span>Home</a>
-        <a href="" class="navlist"><span><ion-icon name="person" class="icons"></ion-icon></span>About</a>
-        <a href="" class="navlist"><span><ion-icon name="list" class="icons"></ion-icon></span>Services</a>
-        <a href="" class="navlist"><span><ion-icon name="mail-open" class="icons"></ion-icon></span>Portfolio</a>
-        <a href="" class="navlist"><span><ion-icon name="chatbubbles" class="icons"></ion-icon></span>Contact</a>
+        <a href="#hero" class="navlist heroclick" ><span><ion-icon name="home" class="icons"></ion-icon></span>Home</a>
+        <a href="#about" class="navlist aboutclick"><span><ion-icon name="person" class="icons"></ion-icon></span>About</a>
+        <a href="#services" class="navlist servicesclick"><span><ion-icon name="list" class="icons"></ion-icon></span>Services</a>
+        <a href="#portfolio" class="navlist portfolioclick"><span><ion-icon name="mail-open" class="icons"></ion-icon></span>Portfolio</a>
+        <a href="#contact" class="navlist contactclick"><span><ion-icon name="chatbubbles" class="icons"></ion-icon></span>Contact</a>
     </nav>
 </div>
-<section class="hero">
+<section class="hero" id="hero">
     <div class="hero-sub">
     <h2>Hello, my name is <span class="name">Ewenode Ruth</span></h2>
-    <h2>I'm a <span class="changecontent">Web Developer</span></h2>
+    <h2>I'm a <span class="changecontent typing">Web Developer</span></h2>
     <p>I am a web developer with an experience of over six month. My expertise is to develope websites. I also have a good idea on graphics design.
         You can see some of my design in my portfolio. 
     </p>
@@ -45,23 +54,23 @@
 
 <div class="settingcolor">
     <div class="settingmode">
-        <ion-icon name="settings" class="settings"></ion-icon>  
-        <ion-icon name="moon" class="moon"></ion-icon>
-        <ion-icon name="sunny" class="sunny"></ion-icon> 
+       <div></div> <ion-icon name="settings" class="settings rotate"></ion-icon>  
+        <ion-icon name="moon" id="moon" onclick="setActiveTheme('night')"></ion-icon>
+        <ion-icon name="sunny" id="sunny" onclick="setActiveTheme('day')"></ion-icon> 
     </div>
     <div class="colortext">
         <h3>Theme Colors</h3>
         <div class="colors">
-            <div id="red"></div>
-            <div id="orange"></div>
-            <div id="green"></div>
-            <div id="blue"></div>
-            <div id="pink"></div>
+            <div id="red" onclick="setActiveStyle('red')"></div>
+            <div id="orange" onclick="setActiveStyle('orange')"></div>
+            <div id="green" onclick="setActiveStyle('green')"></div>
+            <div id="blue" onclick="setActiveStyle('blue')"></div>
+            <div id="pink" onclick="setActiveStyle('pink')"></div>
         </div>
     </div>
     </div>
 
-<section class="about">
+<section class="about" id="about">
 
     <div class="aboutme">
     <h2>About Me</h2>
@@ -73,9 +82,15 @@
 <div class="learn">
 <h3>I'm Ewenode Ruth and <span class="odd">Web Developer </span></h3>
 
-<p class="letter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde praesentium magnam, vitae dolor quia saepe, similique sed sequi animi minima porro tempore, blanditiis officia iure tenetur culpa temporibus delectus.
-Error, placeat. Omnis ab nam fuga mollitia, quod soluta excepturi velit accusamus magni, praesentium animi nesciunt nostrum placeat optio autem ducimus aperiam sint. Laboriosam voluptatem eos ducimus similique iure fugiat!
-Neque maxime ipsum est adipisci id deleniti repellendus a</p>
+<p class="letter">Welcome to my portfolio! I'm a junior web developer and graphics designer with a passion for creating visually stunning and functional digital experiences. Although I'm new to the field, I'm eager to learn and take on new challenges.
+
+    As a web developer, I've begun to explore the world of HTML, CSS, and JavaScript, and I'm excited to continue learning and growing in this area. I've completed a few small projects, including replicating dribble website.
+    
+    As a graphics designer, I've always been fascinated by the power of visual communication. I've started to develop my skills in corel-draw, while I plan on building my knowledge in Photoshop and Illustrator. I'm excited to continue honing my skills and exploring new design possibilities.
+    
+    I'm a quick learner, a team player, and a creative problem-solver. I'm excited to take on new projects and collaborate with others to bring ideas to life.
+    
+    </p>
 </div>
 
 <div class="qualifys">
@@ -133,12 +148,355 @@ Neque maxime ipsum est adipisci id deleniti repellendus a</p>
        </div>
 </div>
 </div>
+<div class="exedu">
+    <div class="edu">
+        <h3>Education</h3>
+        <div class="inneredu">
+           
+            <div class="linecircle">
+                <div class="line"></div>
+                 <div class="circles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                 </div>
+           </div>
 
+           <div class="leveledus">
+           <div class="leveledu">
+            <div class="date">
+                <ion-icon name="calendar" id="calendar"></ion-icon>
+                <p>2016-2022</p>
+            </div>
+
+            <h4>High School</h4>
+            <p>Completed O-Levels with a strong foundation in Art, Design, and Computer Studies, from New Generation Baptist High School
+                 Developed essential skills in problem-solving, critical thinking, and communication.
+              
+                
+                </p>
+           </div>
+
+           <div class="leveledu">
+            <div class="date">
+                <ion-icon name="calendar"></ion-icon>
+                <p>2024</p>
+            </div>
+
+            <h4>Certificate In Web Developement</h4>
+            <p>Gained hands-on experience in:
+                 Web development: Learned HTML, CSS, and JavaScript basics.
+                 Graphics design: Improved skills in corel-draw.
+                Tech tools: Familiarized with industry-standard software.
+             
+               
+            </p>
+           </div>
+
+        </div>
+        </div>
+    </div>
+    <div class="edu">
+        <h3>Experience</h3>
+        <div class="inneredu">
+           
+            <div class="linecircle">
+                <div class="line"></div>
+               <div class="circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+               </div>
+           </div>
+
+           <div class="leveledus">
+           <div class="leveledu">
+            <div class="date">
+                <ion-icon name="calendar" id="calendar"></ion-icon>
+                <p>2007-2022</p>
+            </div>
+
+            <h4>Freelance/Personal Projects
+
+                </h4>
+            <p>
+                Designed logos, flyers, business cards.
+               Developed and designed websites using HTML, CSS, JavaScript.
+               
+                Collaborated with a client to understand her design needs and preferences.
+               </p>
+           </div>
+
+           <div class="leveledu">
+            <div class="date">
+                <ion-icon name="calendar"></ion-icon>
+                <p>2007-2022</p>
+            </div>
+
+            <h4>Group Project</h4>
+            <p>Work together with Group members as the group leader to develop an NGO website, and also designing it's logo, business card, Id cards, and flyers.
+                With team work we achieved a very beautiful result.
+            </p>
+           </div>
+
+        </div>
+        </div>
+    </div>
+</div>
 </section>
+
+<section class="services" id="services">
+
+    <div class="aboutme">
+        <h2>Services</h2>
+        
+        <div class="long"></div>
+        <div class="short"></div>
+    </div>
+<div class="serviceoffer">
+<div class="eachservice">
+    <ion-icon name="laptop-outline" class="laptop"></ion-icon>
+    <h3>Web development</h3>
+    <p>Take your online presence to the next level with our expert website development services! Our team crafts responsive, user-friendly, and engaging websites that drive results. From e-commerce sites to blogs, we'll help you create a digital hub that reflects your brand's personality and values.</p>
+
+</div>
+
+<div class="eachservice">
+    <ion-icon name="phone-portrait" class="laptop"></ion-icon>
+    <h3>Web development</h3>
+    <p>Take your online presence to the next level with our expert website development services! Our team crafts responsive, user-friendly, and engaging websites that drive results. From e-commerce sites to blogs, we'll help you create a digital hub that reflects your brand's personality and values.
+    </p>
+
+</div>
+
+<div class="eachservice">
+    <ion-icon name="color-palette" class="laptop"></ion-icon>
+
+    <h3>Graphics design</h3>
+    <p>Stand out from the crowd with our stunning graphics design services! Our team creates eye-catching flyers, logos, and business cards that capture your brand's essence and leave a lasting impression. From concept to completion, we'll work with you to bring your vision to life.
+    </p>
+
+</div>
+</div>
+
+
+<div class="aboutme">
+    <h2>Happy Clients</h2>
+    
+    <div class="long"></div>
+    <div class="short"></div>
+</div>
+
+<div class="serviceoffer">
+    <div class="eachservice">
+<img src="images/Ellipse 5.png" alt="">
+        <h3>Olotu Adeola</h3>
+        <p> "The logo is so iconic and memorable! It's instantly recognizable and sets ones brand apart from others.
+             I love the story behind your logo and how it relates to your brand's mission. It's so meaningful!
+            Your logo is so versatile and looks great in different formats and colors. Well done!"
+            </p>
+    
+    </div>
+    
+    <div class="eachservice">
+       <img src="images/Ellipse 5 (1).png" alt="">
+        <h3>Ewenode Gift</h3>
+        <p>I love the design and the way it showcases the work. I was impressed by the mobile responsiveness of the website. 
+            The website truly reflects the brand's personality and values. It's a perfect representation of the company!"
+        </p>
+    
+    </div>
+    
+    <div class="eachservice">
+<img src="images/Ellipse 7.png" alt="">
+
+        <h3>Stephen Francis</h3>
+        <p> "You have a great attention to detail and it shows in your work!
+             Your design sense is amazing and I love your style!
+            You're so talented and creative, I'm always impressed by your work!
+            Your work is always so polished and professional, I love it!"
+            </p>
+    
+    </div>
+    </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+    <div class="aboutme">
+        <h2>Portfolio</h2>
+        <div class="long"></div>
+        <div class="short"></div>
+    </div>
+
+    <h3>My Last Projects:</h3>
+
+    <div class="projects curve">
+       <img src="images/ava's cosineupdate.png" alt=""> 
+       <img src="images/ava's flyer.png" alt="">
+       <img src="images/avas business-card.png" alt="">
+    </div>
+
+    <div class="projects curve">
+        <img src="images/AVAS idupdate.png" alt=""> 
+        <img src="images/Backup_of_corporate flyerupdate.png" alt="">
+        <img src="images/Group 2.png" alt="">
+     </div>
+
+     <div class="projects">
+        <div class="absolute">
+            <img src="wedsites/avas.png" alt="">
+            <a href="https://avas-cuisine.onrender.com"> <button>Go Live</button></a>
+        </div>
+        <div class="absolute">
+            <img src="wedsites/fylome.png" alt="">
+            <a href=""> <button>Go Live</button></a>
+        </div>
+        <div class="absolute">
+            <img src="wedsites/menu ava.png" alt="">
+            <a href="https://avas-cuisine.onrender.com"> <button>Go Live</button></a>
+        </div>
+        
+       
+     </div>
+     
+     <div class="projects">
+
+        <div class="absolute">
+            <img src="wedsites/dribbleclone.png" alt="">
+            <a href="https://practice-website-udzi.onrender.com"> <button>Go Live</button></a>
+        </div>
+        <div class="absolute">
+            <img src="wedsites/styleflow.png" alt="">
+            <a href="https://hi-fi.onrender.com"> <button>Go Live</button></a>
+        </div>
+        <div class="absolute">
+            <img src="wedsites/safespacedesk.png" alt="">
+            <a href="https://safe-space-unites-fduh.onrender.com"> <button>Go Live</button></a>
+        </div>
+      
+     </div>
+
+     <div class="project">
+        <div class="absolute">
+            <img src="wedsites/avasphone.png" alt="">
+            <a href="https://avas-cuisine.onrender.com"> <button>Go Live</button></a>
+        </div>
+        <div class="absolute">
+            <img src="wedsites/safespacephone.png" alt="">
+            <a href="https://safe-space-unites-fduh.onrender.com"> <button>Go Live</button></a>
+        </div>
+        <div class="absolute">
+            <img src="wedsites/huddlephone.png" alt="">
+           <a href="https://huddle-project.onrender.com"> <button>Go Live</button></a>
+        </div>
+       
+     </div>
+     
+    
+</section>
+
+
+<section class="contact" id="contact">
+    <div class="aboutme">
+        <h2>Contact Us</h2>
+        <div class="long"></div>
+        <div class="short"></div>
+    </div>
+
+    <div class="contactcontent">
+        <h3>Have You Any Questions?</h3>
+        <h4>I'm At Your Service</h4>
+        <div class="groupcontacts">
+            <div class="eachcontact">
+                <ion-icon name="call" class="contacticon"></ion-icon>
+<h4>Call Me On</h4>
+<p>+2349019511752</p>
+            </div>
+            <div class="eachcontact">
+                <ion-icon name="pin" class="contacticon"></ion-icon>
+<h4>Office</h4>
+<p>Pinnok beach road, poise</p>
+            </div>
+            <div class="eachcontact">
+                <ion-icon name="mail" class="contacticon"></ion-icon>
+<h4>Email</h4>
+<p>ruthewenode73@gmail.com</p>
+            </div>
+
+            <div class="eachcontact">
+                <ion-icon name="globe" class="contacticon"></ion-icon>
+<h4>Website</h4>
+<p>mycoderender.com</p>
+            </div>
+        </div>
+        
+<h3>SEND ME AN EMAIL</h3>
+<h4>I AM VERY RESPONSIVE TO MESSAGES</h4>
+
+<div class = "contact-form">
+    <form id="form">
+      <div>
+        <input type = "text" class = "form-control" placeholder="First Name" name="first_name" id="first_name" required>
+        <input type = "text" class = "form-control" placeholder="Last Name" name="last_name" id="last_name" required>
+      </div>
+      <div>
+        <input type = "email" class = "form-control" placeholder="E-mail" name="email" id="email" required>
+        <input type = "text" class = "form-control" name="phone_number" placeholder="Phone" id="phone_number" required>
+      </div>
+      <textarea rows = "5" placeholder="Message" class = "form-control" name="message" id="message"></textarea>
+      <input type = "submit" id="send-btn" value = "Send message">
+    </form>
+
+ 
+  </div>
+
+    </div>
+</section>
+
+<footer> <p class="copyright">&copy; 2022 <span class="safe-footer">Safe Space Unites.</span> All Rights Reserved </p> 
+    <div class="social-list-box">
+        
+
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/share/7uJgkMKYBopa3At3/?mibextid=LQQJ4d" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.instagram.com/p/C8uRz9Vo4EK/?igsh=MXJ1ZzRhMmszYXhlYg== "
+              class="social-link"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        
+        </ul>
+      </div>
+</footer>
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+emailjs.init('yYQNq6Wu-1zH6nxla')
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="script.js"></script>
+    <script src="switch.js"></script>
+    <script src="type.js"></script>
 </body>
 </html>
