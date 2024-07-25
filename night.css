@@ -118,6 +118,11 @@ align-items: center;
     padding: 3px;
     border-radius: 100%;
   }
+  .contact a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
 
 footer{
     display: flex;

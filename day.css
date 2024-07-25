@@ -159,6 +159,12 @@ z-index: 50;
     border-radius: 100%;
   }
 
+  .contact a{
+    color: rgb(29, 29, 29);
+    text-decoration: none;
+}
+
+
 @media screen and (max-width : 768px){
     .sidehead{
         transform: translateX(-500%);
