@@ -60,3 +60,34 @@ sunny.addEventListener("click", (e) => {
     sunny.style.display = "none"
     moon.style.display = "block"
 })
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+const herosub = document.querySelector(".hero-sub")
+const herobanner = document.querySelector(".herobanner")
+const aboutme = document.querySelector(".aboutme")
+const learn = document.querySelector(".learn")
+const personal = document.querySelector(".personal")
+const levelbars = document.querySelector(".levelbars")
+const edu = document.querySelector(".edu")
+const eachservice = document.querySelector(".eachservice")
+const curveimg = document.querySelector(".curveimg")
+const absolute = document.querySelector(".absolute")
+const eachcontact = document.querySelector(".eachcontact")
+const questions = document.querySelector(".questions")
+const atservices = document.querySelector(".atservices")
+const contactform = document.querySelector(".contact-form")
+
+sr.reveal(`.hero-sub, .herobanner,
+            .aboutme, .learn,
+            .personal, .levelbars,
+            .edu, .eachservice,
+            ".curveimg", .absolute,
+            .eachcontact, .questions, .atservices, .contact-form`, {
+    interval: 200
+})
